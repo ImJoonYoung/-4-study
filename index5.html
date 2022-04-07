@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gnb1/gnb2</title>
+    <style>
+        *{margin: 0; padding: 0;}
+        a{text-decoration: none; color: #000;}
+        ul{list-style: none;}
+        .gnb{
+            width: 800px; margin-top: 50px; text-align: center;
+        }
+        .gnb>li{
+            float: left;
+        }
+        .gnb>li>a{
+            display: block; width: 200px; height: 50px; line-height: 50px; background: #000; color: #fff;
+        }
+        .gnb>li:hover>a{
+            background: #ff0; color: #333;
+        }
+        .gnb .sub{
+            display: none;
+        }
+        .gnb .sub a{
+            display: block; height: 40px; line-height: 40px;
+        }
+        .gnb .sub a:hover{
+            background: #ff0; color: #333;
+        }
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            $(".gnb>li").hover(function(){
+                $(".gnb .sub").stop().slideDown();//gnb1
+                //$(this).find(".sub").stop().slideDown();
+            },function(){
+                $(".gnb .sub").stop().slideUp();//gnb1
+                //$(this).find(".sub").stop().slideUp();
+            });
+        });
+    </script>
+</head>
+<body>
+    <ul class="gnb">
+        <li>
+            <a href="#">1depth1</a>
+            <ul class="sub">
+                <li><a href="#">2dpeth1</a></li>
+                <li><a href="#">2dpeth2</a></li>
+                <li><a href="#">2dpeth3</a></li>
+                <li><a href="#">2dpeth4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">1depth2</a>
+            <ul class="sub">
+                <li><a href="#">2dpeth1</a></li>
+                <li><a href="#">2dpeth2</a></li>
+                <li><a href="#">2dpeth3</a></li>
+                <li><a href="#">2dpeth4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">1depth3</a>
+            <ul class="sub">
+                <li><a href="#">2dpeth1</a></li>
+                <li><a href="#">2dpeth2</a></li>
+                <li><a href="#">2dpeth3</a></li>
+                <li><a href="#">2dpeth4</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">1depth4</a>
+            <ul class="sub">
+                <li><a href="#">2dpeth1</a></li>
+                <li><a href="#">2dpeth2</a></li>
+                <li><a href="#">2dpeth3</a></li>
+                <li><a href="#">2dpeth4</a></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

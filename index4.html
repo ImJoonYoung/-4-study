@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>slide3</title>
+    <style>
+        *{margin: 0; padding: 0; border: 0; box-sizing: border-box;}
+        ul{list-style: none;}
+        img{vertical-align: top;}
+        .banner{
+            width: 1200px; height: 300px; margin: 0 auto;
+            overflow: hidden; 
+        }
+        
+        
+    </style>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        $(function(){
+            var n=0;
+            var b=$(".banner").find("li");
+            b.hide();
+            fade();//호출
+            function fade(){
+                b.eq(n).show();
+                b.eq(n).delay(2500);
+                b.eq(n).fadeOut(500,function(){
+                    if(n<2){
+                        n=n+1;
+                    }
+                    else{
+                        n=0;
+                    }
+                    b.eq(n).fadeIn(500, fade);
+                });
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="banner">
+        <ul>
+            <li>
+                <img src="images2/img1_1200.jpg" alt="1">
+            </li>
+            <li>
+                <img src="images2/img2_1200.jpg" alt="1">
+            </li>
+            <li>
+                <img src="images2/img3_1200.jpg" alt="1">
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
