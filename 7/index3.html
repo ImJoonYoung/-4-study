@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=\, initial-scale=1.0">
+  <title>addClass()/removeClass()/hasClass()/toggleClass()</title>
+  <style>
+    li{
+      font-size:30px;
+      margin:20px;
+    }
+
+    div{
+      width: 200px;
+      height: 200px;
+      background:#f90;
+      margin: 50px;
+    }
+
+    .on{
+      width: 400px;
+      height: 400px;
+    }
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("li").eq(0).click(function(){
+        $("div").addClass("on");
+      });
+
+      $("li").eq(1).click(function(){
+        $("div").removeClass("on");
+      });
+
+      $("li").eq(2).click(function(){
+        $("div").toggleClass("on");
+        var c=$("div").hasClass("on")
+        console.log(c);
+      });
+
+
+
+
+    });
+  </script>
+</head>
+<!-- 
+  9. .addClass("클래스이름"); 클래스를 추가한다.
+  10. .removeClass("클래스이름"); 클래스를 제거한다.
+  11. .hasClass("클래스이름"); 선택한 요소에 클래스 유무 확인
+  있으면 true, 없으면 false
+  12. .toggleClass("클래스이름"); 
+ -->
+<body>
+  <ul>
+    <li>클래스를 추가하기</li>
+    <li>클래스를 제거하기</li>
+    <li>클래스를 추가/제거하기</li>
+  </ul>
+  <div></div>
+</body>
+</html>

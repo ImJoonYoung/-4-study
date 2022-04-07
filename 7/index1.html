@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>width/height</title>
+  <style>
+    div{
+      width: 200px;
+      height: 250px;
+      padding:10px;
+      border:5px solid #000;
+      margin:20px;
+      background:#ff0
+    }
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("div").click(function(){
+        //var w=$(this).width();//너비값
+        //var w=$(this).innerWidth();//너비+패딩값
+        //var w=$(this).outerWidth();//너비+패딩+보더값
+        //var w=$(this).outerWidth(true);//너비+패딩+보더+마진
+        //console.log(w);
+        $(this).width(400);
+        //var h=$(this).height();
+        //var h=$(this).innerHeight();//높이+패딩
+        //var h=$(this).outerHeight();//높이+패딩+보더
+        //var h=$(this).outerHeight(true);//높이+패딩+보더+마진
+        //console.log(h);
+        $(this).height(200);
+      });
+
+
+
+
+
+
+
+    });
+  </script>
+</head>
+<!-- 
+  이벤트 : 사용자 동작에 의해서 나오는 작업
+  1. .click();
+  2. .mouseenter();
+  3. .mouseleave();
+  4. .hover();
+  5. .mousemove();
+  6. .focus();
+  7. .blur();
+  8. .focusin();
+  9. .focusout();
+  10. .resize();
+  11. .scroll();
+  12. .keyup();
+  13. .keydown();
+  14. .on();
+  $("선택자").on("이벤트명",function(){})
+  15. .off();
+  16. this
+  17. .each(function(){});
+  18. .touchstart(); ==모바일
+  19. .touchmove();  ==모바일
+  20. .touchend();   ==모바일
+  method: 명령어(자바스크립트에 내장되어 있다)/함수(사용자가 직접 제작하는 명령어)
+  1. .css();
+  2. .width(); 특정요소의 너비값을 구하는 명령어, 변경할때도 사용
+  2-1. .innerWidth(); 너비값과 패딩값
+  2-2. .outerWidth(); 너비값과 패딩값,border값까지
+  2-3. .outerWidth(true);
+  3. .height(); 특정요소의 높이값을 구하는 명령어, 변경할때도 사용
+  3-1. innerHeight();
+  3-2. outerHeight();
+  3-3. outerHeight(true);
+
+
+  
+ -->
+<body>
+  <div></div>
+</body>
+</html>

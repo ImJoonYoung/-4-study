@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>.eachevent</title>
+  <style>
+    .s1{color:#f00;}
+    .s2{color:#f90;}
+    .s3{color:#09f;}
+    .s4{color:#f67;}
+    .s5{color:#000;}
+    .s6{color:#f40;}
+    .s7{color:#f90;}
+    
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      var n=1;//전역변수
+      $("p").each(function(){
+        $(this).addClass("s"+n);
+        //n++;
+        n++;
+        return false//반복작업을 중지할때
+      });
+
+    });
+  </script>
+</head>
+<!-- 
+  17. .each(); 선택한 요소가 여러개일때 반복하여 이벤트를 실행한다.
+
+  method
+  1. .css();
+  2. .addClass()("클래스명");클래스를 추가한다
+ -->
+<body>
+  <p>2022년</p>
+  <p>3월</p>
+  <p>22일</p>
+  <p>화요일</p>
+  <p>화요일</p>
+  <p>화요일</p>
+  <p>화요일</p>
+</body>
+</html>

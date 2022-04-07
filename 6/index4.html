@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mobile이벤트-touch</title>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $("li:eq(0)").on("touchstart",function(){
+        $(this).css({background : "#ff0"})
+      });
+      $("li:eq(1)").on("touchmove",function(){
+        $(this).css({background : "#f90"})
+      });
+      $("li").eq(2).on("touchend",function(){
+        $(this).css({background: "#f65"})
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+  <h1>touch event</h1>
+  <p>모바일에서는 더블탭, 롱탭 등에 대한 이벤트가 없기 때문에 터치이벤트로 작업을 진행한다. <br/>
+  플리킹이나 드래그앤드롭과 같은 기능을 구현할때에도 터치이벤트를 사용한다</p>
+  <p>플리킹: 화면을 터치하고 밀어내면서 화면을 상하좌우로 움직이는 작업</p>
+  <ul>
+    <li>18. touchstart : 스크린에 손가락으로 터치할때 발생하는 이벤트</li>
+    <li>19. touchmove : 손가락으로 터치한채로 움직일때 발생하는 이벤트</li>
+    <li>20. touchend : 손가락을 땔때 발생하는 이벤트 <br>
+    touchcancel : 이벤트를 취소시킬때 발생하는 이벤트(표준이 정의되지 않음)</li>
+  </ul>
+</body>
+</html>

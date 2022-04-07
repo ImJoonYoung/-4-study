@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event</title>
+  <style></style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $(".html").click(function(){
+        $(this).css({background: "#ff0"});
+      });
+      $(".css").mouseenter(function(){
+        $(this).css({background:"#f69"})  
+      });
+      $(".css").mouseleave(function(){
+        $(this).css({background:"#fff"})
+      });
+      $(".jquery").hover(function(){
+        $(this).css({background:"#f67"});
+      }, function(){
+        $(this).css({background:"none"});
+      });
+      $(".javascript").mousemove(function(){
+        $(this).css({background:"#f67"})
+      });
+      $(".txt1").focus(function(){
+        $(this).css({background:"#f00"})
+      });
+      $(".txt1").blur(function(){
+        $(this).css({background:"#fff"})
+      });
+
+    });
+  </script>
+</head>
+<!-- 
+  이벤트 : 사용자 동작(클릭, 오버, 스크롤, 키보드...)에 의해서만 움직이는 작업
+  객체선정+이벤트명+명령어(함수)
+  1. click();
+     $("선택자").click(function(){});
+  2. .mouseenter();마우스를 올리면
+     $("선택자").mouseenter(function(){});   
+  3. .mouseleave();마우스를 내리면
+     $("선택자").mouseleave(function(){}); 
+  4. .hover();마우스를 올리면/마우스를 내리면
+     $("선택자").hover(function(){}, function(){});
+  5. .mousemove();마우스를 움직이면  
+     $("선택자").mousemove(function(){});   
+  6. .focus();사용자가 폼요소에 클릭하거나 탭키전환하면
+     $("선택자").focus(function(){}); 
+  7. .blur(); 폼 요소에서 focus가 이동이 되면
+     $("선택자").blur(function(){});       
+ -->
+<body>
+  <ul class="ex">
+    <li class="html">html</li>
+    <li class="css">css</li>
+    <li class="jquery">jquery</li>
+    <li class="javascript">javascript</li>
+  </ul>
+
+  <form action="#">
+    <input type="text" class="txt1">
+    <input type="text" class="txt2">
+  </form>
+</body>
+</html>

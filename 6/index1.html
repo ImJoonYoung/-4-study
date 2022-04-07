@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event</title>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $(".html").click(function(){
+        $(this).css({background: "#ff0"})
+      });
+      $(".css").hover(function(){
+        $(this).css({background:"#f90"})
+      }, function(){
+        $(this).css({background: "none"})
+      });
+      $(".css3").mouseover(function(){
+        $(this).css({background: "#f67"})
+      });
+      $(".txt").focus(function(){
+        $(this).css({background : "#ccc"})
+      });
+      $(".txt").blur(function(){
+        $(this).css({background : "none"})
+      });
+      $("#focus").focusin(function(){
+        $(this).css({background : "#ff0"})
+      });
+      $("#focus").focusout(function(){
+        $(this).css({background : "none"})
+      });
+
+    });
+  </script>
+</head>
+<!-- 
+  8. focusin(); 포커스가 들어갔을때
+    $("선택자").focusin(function(){});
+  9. focusout(); 포커스가 나갔을때
+ -->
+<body>
+  <ul>
+    <li class="html">html</li>
+    <li class="css">css</li>
+    <li class="css3">css3</li>
+    <li class="jquery">jquery</li>
+    <li class="javascript">javascipt</li>
+  </ul>
+  <form action="#">
+    <input type="text" class="txt">
+    <input type="text" id="focus">
+  </form>
+</body>
+</html>

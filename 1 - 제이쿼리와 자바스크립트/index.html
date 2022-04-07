@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery-1일차</title>
+  <style>
+
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <ul class="ex">
+    <li class="html">html</li>
+    <li class="css">css</li>
+    <li class="jquery">jquery</li>
+  </ul>
+  <!-- 사용자 스크립트 -->
+  <script>
+    $(".html").css({
+      "background":"#000", "color":"#fff"
+    });
+    $(".css").css({"background":"#ff0", "color" : "#f00"});
+    //$(".jquery").css({"margin-left" : 50});
+    $(".jquery").css({marginLeft:100});
+  </script>
+</body>
+
+</html>

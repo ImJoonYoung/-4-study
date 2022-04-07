@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a{text-decoration: none;color:#000;}
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      // $("li").children("a").css({"background" : "#f90"});
+      //$("ul").find("span").css({background: "#ff0"})
+      //$("a").parent().css({background: "#ff0"})
+      //$(".sec").siblings().css({background: "#ff0"})
+      //$("li").eq(2).css({background:"#f09"})
+      //$("li:eq(0)").css({background:"#f90"})
+      //$(".sec").next().css({background: "#ff0"})
+      //==$(".sec").prev().css({background: "#ff0"})
+      //.not() : 특정요소 제외
+      //$("li").not(".sec").css({background:"#ff0"})
+      //.filter() : 
+      //  :odd= 홀수
+      //$("li").filter(":odd").css({background:"#f67"})
+      //$("li:nth-child(odd)").css({background:"#f67"})
+    });
+  </script>
+</head>
+<body>
+  <ul>
+    <li>리스트1</li>
+    <li class="sec"><a href="#">링크2</a><span>리스트2</span></li>
+    <li>리스트3</li>
+    <li>리스트4</li>
+  </ul>
+</body>
+</html>

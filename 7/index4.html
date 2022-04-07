@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>controller</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+
+    ul{
+      list-style: none;
+    }
+
+    a{
+      text-decoration: none;
+    }
+
+    body{
+      margin:20px;
+      padding:20px;
+      background:#ccc;
+    }
+
+    h1{
+      margin-bottom:35px;
+      color:#555;
+    }
+
+    .cont{
+      margin-top:35px;
+    }
+
+    .controller{
+      padding-top:20px;
+    }
+
+    .controller li{
+      display: inline-block;
+      margin-left:10px ;
+    }
+
+    .controller li:first-child{
+      margin-left:0;
+    }
+
+    .controller li a{
+      display: block;
+      width:20px;
+      height: 20px;
+      background:#fff;
+      border-radius: 20px;
+      transition: all 0.3s;
+    }
+
+    .controller .on a{
+      width: 50px;
+      background:#ff0
+    }
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $(".controller li").click(function(){
+        $(".controller li").removeClass("on");
+        $(this).addClass("on");
+      })
+
+
+
+
+    });
+  </script>
+</head>
+<body>
+  <h1>controller</h1>
+  <div class="cont">
+    <ul class="controller">
+      <li class="on"><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+      <li><a href="#"></a></li>
+    </ul>
+  </div>
+</body>
+</html>

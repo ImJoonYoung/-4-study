@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>event</title>
+  <style>
+    body{
+      height: 3000px;
+      margin:20px;
+      padding:20px;
+      background:#eee;
+    }
+
+    li{
+      margin-top:20px;
+    }
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $(window).resize(function(){
+        //alert("리사이즈")
+        console.log("리사이즈이벤트")
+      });
+      $(window).scroll(function(){
+        console.log("스크롤이벤트")
+      });
+      $(window).keydown(function(e){
+        //console.log("keydown");
+        console.log(e.keyCode);
+      });
+      $(window).keyup(function(){
+        console.log("keyup")
+      });
+
+    });
+  </script>
+</head>
+<!-- 
+  10. resize(); 크기가 변경이 되면 (해상도가 변경이 되면)
+  $(window).resize(function(){});
+  11. scroll(); 스크롤이벤트 (스크롤 하면 이벤트 실행)
+  $(window).scroll(function(){});
+  12. .keydown(); 키보드를 누르면
+  $(window).keydown(function(){});
+  13. .keyup(); 키보드를 띄우면
+  $(window).keyup(function(){});
+ -->
+<body>
+  <ul>
+    <li class="html">html</li>
+    <li class="css">css</li>
+    <li class="css3">css3</li>
+    <li class="jquery">jquery</li>
+    <li class="javascript">javascipt</li>
+  </ul>
+</body>
+</html>

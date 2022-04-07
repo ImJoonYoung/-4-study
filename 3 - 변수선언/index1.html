@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jquery-3</title>
+  <style>
+    a{text-decoration: none;color:#000}
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      //$("ul>li>a").css({"background-color" : "#ff0"});
+      /* $("li").children("span").css({
+        "color" : "#00f"
+      }); */
+      //$("span").parents().css({background:"#f00"})
+      //$("a").siblings().css({color:"#f90"});
+     /*  $("li:eq(1)").css({
+        background:"#ff0"
+      }); */
+      /* $("li").eq(3).css({
+        background: "#09f"
+      }); */
+      //$("li:eq(2)").css({background:"#ff0"})
+      $("li").siblings().css({color:"#ccc"})
+
+    });
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <ul class="ex">
+      <li class="html">html</li>
+      <li class="css">css</li>
+      <li class="css3"><a href="#">text</a> <span> css3</span></li>
+      <li class="jquery">jquery</li>
+      <li class="javascript">javascript</li>
+    </ul>
+  </div>
+</body>
+</html>

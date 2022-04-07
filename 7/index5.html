@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 300px;
+      height: 300px;
+      margin: 30px;
+      font-size:50px;
+      color:#fff;
+    }
+    
+    .box1{
+      background:#f00;
+    }
+
+    .box2{
+      background:#ff0
+    }
+
+    p{
+      font-size:30px;
+    }
+  </style>
+  <script src="./script/jquery-3.6.0.min.js"></script>
+  <script>
+    $(function(){
+      $(".box1").click(function(){
+        $("p").text("box1을 클릭했습니다.");
+      });
+      $(".box2").click(function(){
+        $("p").text("box2을 클릭했습니다.");
+      });
+    });
+  </script>
+</head>
+<!-- 
+  13. .text(); 특정선택자안의 텍스트를 추가하거나 변경할수 있다.
+ -->
+<body>
+  <div class="box1">box1</div>
+  <div class="box2">box2</div>
+  <p></p>
+</body>
+</html>
